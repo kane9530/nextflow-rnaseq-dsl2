@@ -1,0 +1,42 @@
+{
+    "salmon_version": "1.0.0",
+    "samp_type": "none",
+    "opt_type": "vb",
+    "quant_errors": [],
+    "num_libraries": 1,
+    "library_types": [
+        "IU"
+    ],
+    "frag_dist_length": 1001,
+    "seq_bias_correct": false,
+    "gc_bias_correct": false,
+    "num_bias_bins": 4096,
+    "mapping_type": "mapping",
+    "num_valid_targets": 1,
+    "num_decoy_targets": 0,
+    "num_eq_classes": 1,
+    "serialized_eq_classes": false,
+    "eq_class_properties": [
+        "range_factorized"
+    ],
+    "length_classes": [
+        171001
+    ],
+    "index_seq_hash": "c7b06752fa0748ecfa05ab97e8460b69c408b6d5fedf9de3d0d53b05570cf942",
+    "index_name_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "index_seq_hash512": "",
+    "index_name_hash512": "",
+    "index_decoy_seq_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "index_decoy_name_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "num_bootstraps": 0,
+    "num_processed": 2937,
+    "num_mapped": 2058,
+    "num_decoy_fragments": 0,
+    "num_dovetail_fragments": 1037,
+    "num_fragments_filtered_vm": 874,
+    "num_alignments_below_threshold_for_mapped_fragments_vm": 1540,
+    "percent_mapped": 70.07150153217569,
+    "call": "quant",
+    "start_time": "Wed Mar 29 03:31:36 2023",
+    "end_time": "Wed Mar 29 03:31:36 2023"
+}
