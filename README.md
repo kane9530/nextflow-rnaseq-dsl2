@@ -37,7 +37,8 @@ being consumed, I transformed the index file emitted from the channel into a sin
 
 ```
 transcriptome_ch = Channel
-        .fromPath(params.transcriptome, checkIfExists:true).collect()
+        .fromPath(params.transcriptome, checkIfExists:true)
+        .collect()
 ```
 
 This is discussed in the [Nextflow Channel docs](https://www.nextflow.io/docs/latest/channel.html), and is a similar issue to this [post](https://bioinformatics.stackexchange.com/questions/18321/how-fo-force-nextflow-to-repeat-a-process-until-all-values-in-a-particular-chann) in stackexchange.
