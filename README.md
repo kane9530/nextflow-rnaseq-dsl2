@@ -33,7 +33,14 @@ is read. Since `transcriptome_ch` outputs the path to the single `index` file, w
 it is supplied as an input to `QUANT` together with the `read_pairs_ch` which contains 3
 items, **only the first read pair** is processed. Hence, to ensure that the index file can be read an unlimited number of times without 
 being consumed, I transformed the index file emitted from the channel into a single list with the
-`.collect()` operator, which creates a value channel. This is discussed in the [Nextflow Channel docs](https://www.nextflow.io/docs/latest/channel.html), and is a similar issue to this [post](https://bioinformatics.stackexchange.com/questions/18321/how-fo-force-nextflow-to-repeat-a-process-until-all-values-in-a-particular-chann) in stackexchange.
+`.collect()` operator, which creates a value channel. 
+
+```
+transcriptome_ch = Channel
+        .fromPath(params.transcriptome, checkIfExists:true).collect()
+```
+
+This is discussed in the [Nextflow Channel docs](https://www.nextflow.io/docs/latest/channel.html), and is a similar issue to this [post](https://bioinformatics.stackexchange.com/questions/18321/how-fo-force-nextflow-to-repeat-a-process-until-all-values-in-a-particular-chann) in stackexchange.
 
 To illustrate the importance of distinguishing value from queue channels, I've added the 
 `queue_vs_value.nf` workflow in the directory which showcases the distinction between
